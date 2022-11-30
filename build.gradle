@@ -34,4 +34,4 @@ subprojects {
     }
 }
 
-apply("${project.rootDir}/buildscripts/toml-updater-config.gradle")
+//apply("${project.rootDir}/buildscripts/toml-updater-config.gradle")
