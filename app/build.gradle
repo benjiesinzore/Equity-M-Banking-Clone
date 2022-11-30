@@ -3,13 +3,20 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+
+//New way
+//plugins {
+//    id("com.android.application")
+//    id("kotlin-android")
+//}
+
 android {
     namespace 'com.benjaminsinzore.equitym_bankingclone'
     compileSdk 33
 
     defaultConfig {
         applicationId "com.benjaminsinzore.equitym_bankingclone"
-        minSdk 21
+        minSdk 23
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -63,8 +70,26 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
 
-
     // custom declaration for latest versions of material 3 and adaptive accompanist
     implementation("androidx.compose.material3:material3:1.1.0-alpha02")
     implementation("com.google.accompanist:accompanist-adaptive:0.26.2-beta")
+
+    //Additional Libraries
+    def accompanist = "0.27.0"
+    implementation("com.google.accompanist:accompanist-flowlayout:$accompanist")
+    implementation("com.google.accompanist:accompanist-pager:$accompanist")
+    implementation("com.google.accompanist:accompanist-permissions:$accompanist")
+    implementation("com.google.accompanist:accompanist-swiperefresh:$accompanist")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:$accompanist")
+
+    def androidx_activity_compose = "1.6.1"
+    implementation("androidx.activity:activity-compose:$androidx_activity_compose")
+    implementation("androidx.activity:activity-ktx:$androidx_activity_compose")
+    implementation("androidx.appcompat:appcompat:1.5.1")
+    implementation("androidx.benchmark:benchmark-macro:1.1.1")
+    implementation("androidx.benchmark:benchmark-macro-junit4:1.1.1")
+
+    implementation("androidx.compose.material3:material3:1.0.1")
+    implementation("androidx.compose.material3:material3-window-size-class:1.0.1")
+
 }
