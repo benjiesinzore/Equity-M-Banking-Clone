@@ -14,6 +14,9 @@ import com.benjaminsinzore.equitym_bankingclone.ui.theme.EquityMBankingCloneThem
 import com.google.accompanist.adaptive.calculateDisplayFeatures
 
 
+
+
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
