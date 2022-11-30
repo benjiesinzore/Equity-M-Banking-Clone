@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.benjaminsinzore.equitym_bankingclone'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.benjaminsinzore.equitym_bankingclone"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -60,4 +60,9 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+
+
+    // custom declaration for latest versions of material 3 and adaptive accompanist
+    implementation("androidx.compose.material3:material3:1.1.0-alpha02")
+    implementation("com.google.accompanist:accompanist-adaptive:0.26.2-beta")
 }

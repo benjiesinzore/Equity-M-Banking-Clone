@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.benjaminsinzore.equitym_bankingclone.ui.theme.EquityMBankingCloneTheme
+import com.google.accompanist.adaptive.calculateDisplayFeatures
 
 
 class MainActivity : ComponentActivity() {
@@ -18,7 +19,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             EquityMBankingCloneTheme {
-                // A surface container using the 'background' color from the theme
+
+//                val windowSize = calculateWindowSizeClass(this)
+                val displayFeatures = calculateDisplayFeatures(this)
+//                val uiState by viewModel.uiState.collectAsStateWithLifecycle()
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
