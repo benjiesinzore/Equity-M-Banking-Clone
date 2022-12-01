@@ -17,6 +17,10 @@
 package com.benjaminsinzore.equitym_bankingclone.ui.navigation
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Article
+import androidx.compose.material.icons.filled.Inbox
+import androidx.compose.material.icons.filled.People
+import androidx.compose.material.icons.outlined.ChatBubbleOutline
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
