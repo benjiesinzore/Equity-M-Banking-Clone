@@ -24,6 +24,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             EquityMBankingCloneTheme {
 
+
                 val windowSize = calculateWindowSizeClass(this)
                 val displayFeatures = calculateDisplayFeatures(this)
 //                val uiState by viewModel.uiState.collectAsStateWithLifecycle()
