@@ -18,11 +18,11 @@ import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.benjaminsinzore.equitym_bankingclone.data.local.LocalEmailsDataProvider
 import com.benjaminsinzore.equitym_bankingclone.ui.theme.EquityCloneApp
 import com.benjaminsinzore.equitym_bankingclone.ui.theme.EquityCloneHomeUIState
 import com.benjaminsinzore.equitym_bankingclone.ui.theme.EquityCloneHomeViewModel
 import com.benjaminsinzore.equitym_bankingclone.ui.theme.EquityMBankingCloneTheme
-import com.benjaminsinzore.equitym_bankingclone.data.local.LocalEmailsDataProvider
 import com.google.accompanist.adaptive.calculateDisplayFeatures
 
 
@@ -67,6 +67,8 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
+
 
 
 
