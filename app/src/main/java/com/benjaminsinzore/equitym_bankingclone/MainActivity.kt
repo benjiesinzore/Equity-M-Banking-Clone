@@ -1,5 +1,6 @@
 package com.benjaminsinzore.equitym_bankingclone
 
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
