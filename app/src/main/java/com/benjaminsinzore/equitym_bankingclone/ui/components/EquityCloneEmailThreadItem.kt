@@ -17,33 +17,20 @@
 package com.benjaminsinzore.equitym_bankingclone.ui.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.StarBorder
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.benjaminsinzore.equitym_bankingclone.R
-import com.benjaminsinzore.equitym_bankingclone.data.Email
-import com.example.reply.ui.components.ReplyProfileImage
+import com.benjaminsinzore.equitym_bankingclone.data.models.Email
 
-@OptIn(ExperimentalMaterial3Api::class)
+
 @Composable
 fun ReplyEmailThreadItem(
     email: Email,
@@ -59,7 +46,7 @@ fun ReplyEmailThreadItem(
                 .padding(20.dp)
         ) {
             Row(modifier = Modifier.fillMaxWidth()) {
-                ReplyProfileImage(
+                EquityCloneProfileImage(
                     drawableResource = email.sender.avatar,
                     description = email.sender.fullName,
                 )

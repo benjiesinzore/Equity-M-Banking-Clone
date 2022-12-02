@@ -1,5 +1,5 @@
 import com.benjaminsinzore.equitym_bankingclone.R
-import com.benjaminsinzore.equitym_bankingclone.data.Account
+import com.benjaminsinzore.equitym_bankingclone.data.models.Account
 
 /*
  * Copyright 2022 The Android Open Source Project

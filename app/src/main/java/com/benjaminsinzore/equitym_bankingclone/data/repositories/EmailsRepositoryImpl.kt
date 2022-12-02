@@ -1,7 +1,9 @@
 
-package com.benjaminsinzore.equitym_bankingclone.data
+package com.benjaminsinzore.equitym_bankingclone.data.repositories
 
+import com.benjaminsinzore.equitym_bankingclone.data.MailboxType
 import com.benjaminsinzore.equitym_bankingclone.data.local.LocalEmailsDataProvider
+import com.benjaminsinzore.equitym_bankingclone.data.models.Email
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 

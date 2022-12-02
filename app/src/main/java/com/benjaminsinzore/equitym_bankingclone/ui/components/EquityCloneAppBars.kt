@@ -28,12 +28,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.benjaminsinzore.equitym_bankingclone.R
-import com.benjaminsinzore.equitym_bankingclone.data.Email
-import com.example.reply.ui.components.ReplyProfileImage
+import com.benjaminsinzore.equitym_bankingclone.data.models.Email
 
 
+@Preview(showBackground = true)
 @Composable
 fun EquityCloneSearchBar(modifier: Modifier = Modifier) {
     Row(
@@ -50,19 +51,19 @@ fun EquityCloneSearchBar(modifier: Modifier = Modifier) {
             tint = MaterialTheme.colorScheme.outline
         )
         Text(
-            text = stringResource(id = R.string.search_replies),
+            text = stringResource(id = R.string.search_equity),
             modifier = Modifier
                 .weight(1f)
                 .padding(16.dp),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.outline
         )
-        ReplyProfileImage(
+        EquityCloneProfileImage(
             drawableResource = R.drawable.avatar_6,
             description = stringResource(id = R.string.profile),
             modifier = Modifier
                 .padding(12.dp)
-                .size(32.dp)
+                .size(25.dp)
         )
     }
 }

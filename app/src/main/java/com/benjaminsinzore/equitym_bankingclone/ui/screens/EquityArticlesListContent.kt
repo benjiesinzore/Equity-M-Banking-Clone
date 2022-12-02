@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.benjaminsinzore.equitym_bankingclone.ui
+package com.benjaminsinzore.equitym_bankingclone.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -32,17 +32,21 @@ import androidx.compose.ui.unit.dp
 import com.benjaminsinzore.equitym_bankingclone.R
 
 @Composable
-fun EmptyComingSoon(
+fun EquityCloneArticlesScreen(
     modifier: Modifier = Modifier
 ) {
+
+
     Column(
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
+
     ) {
+
         Text(
             modifier = Modifier.padding(8.dp),
-            text = stringResource(id = R.string.empty_screen_title),
+            text = stringResource(id = R.string.articles_screen),
             style = MaterialTheme.typography.titleLarge,
             textAlign = TextAlign.Center,
             color = MaterialTheme.colorScheme.primary
@@ -57,8 +61,8 @@ fun EmptyComingSoon(
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
-fun ComingSoonPreview() {
-    EmptyComingSoon()
+fun EquityCloneArticlesPreview() {
+    EquityCloneArticlesScreen()
 }

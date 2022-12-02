@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.reply.ui.components
+package com.benjaminsinzore.equitym_bankingclone.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.size
@@ -25,8 +25,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
+
 @Composable
-fun ReplyProfileImage(
+fun EquityCloneProfileImage(
     drawableResource: Int,
     description: String,
     modifier: Modifier = Modifier

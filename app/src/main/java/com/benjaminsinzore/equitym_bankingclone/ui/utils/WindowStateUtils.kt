@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.benjaminsinzore.equitym_bankingclone.ui.theme.utils
+package com.benjaminsinzore.equitym_bankingclone.ui.utils
 
 import android.graphics.Rect
 import androidx.window.layout.FoldingFeature

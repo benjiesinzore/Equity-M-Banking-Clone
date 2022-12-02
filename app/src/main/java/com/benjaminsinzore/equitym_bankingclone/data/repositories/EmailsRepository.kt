@@ -14,12 +14,14 @@
  * limitations under the License.
  */
 
-package com.benjaminsinzore.equitym_bankingclone.data
+package com.benjaminsinzore.equitym_bankingclone.data.repositories
 
+import com.benjaminsinzore.equitym_bankingclone.data.MailboxType
+import com.benjaminsinzore.equitym_bankingclone.data.models.Email
 import kotlinx.coroutines.flow.Flow
 
 /**
- * An Interface contract to get all enails info for a User.
+ * An Interface contract to get all emails info for a User.
  */
 interface EmailsRepository {
     fun getAllEmails(): Flow<List<Email>>

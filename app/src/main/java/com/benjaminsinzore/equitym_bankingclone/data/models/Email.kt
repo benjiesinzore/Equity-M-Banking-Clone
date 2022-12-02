@@ -1,10 +1,13 @@
-package com.benjaminsinzore.equitym_bankingclone.data
+package com.benjaminsinzore.equitym_bankingclone.data.models
+
+import com.benjaminsinzore.equitym_bankingclone.data.EmailAttachment
+import com.benjaminsinzore.equitym_bankingclone.data.MailboxType
 
 data class Email(
 
     val id: Long,
-    val sender: com.benjaminsinzore.equitym_bankingclone.data.Account,
-    val recipients: List<com.benjaminsinzore.equitym_bankingclone.data.Account> = emptyList(),
+    val sender: Account,
+    val recipients: List<Account> = emptyList(),
     val subject: String,
     val body: String,
     val attachments: List<EmailAttachment> = emptyList(),

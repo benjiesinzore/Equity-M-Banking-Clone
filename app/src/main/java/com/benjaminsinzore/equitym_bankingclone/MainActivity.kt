@@ -20,8 +20,8 @@ import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.benjaminsinzore.equitym_bankingclone.data.local.LocalEmailsDataProvider
 import com.benjaminsinzore.equitym_bankingclone.ui.EquityCloneApp
-import com.benjaminsinzore.equitym_bankingclone.ui.theme.EquityCloneHomeUIState
-import com.benjaminsinzore.equitym_bankingclone.ui.theme.EquityCloneHomeViewModel
+import com.benjaminsinzore.equitym_bankingclone.ui.EquityCloneHomeUIState
+import com.benjaminsinzore.equitym_bankingclone.ui.EquityCloneHomeViewModel
 import com.benjaminsinzore.equitym_bankingclone.ui.theme.EquityMBankingCloneTheme
 import com.google.accompanist.adaptive.calculateDisplayFeatures
 
@@ -30,8 +30,7 @@ class MainActivity : ComponentActivity() {
 
     private val viewModel: EquityCloneHomeViewModel by viewModels()
 
-    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class, ExperimentalMaterial3WindowSizeClassApi::class,
-        ExperimentalLifecycleComposeApi::class
+    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class, ExperimentalLifecycleComposeApi::class
     )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,9 +39,10 @@ class MainActivity : ComponentActivity() {
             EquityMBankingCloneTheme {
 
 
+                val uiState by viewModel.uiState.collectAsStateWithLifecycle()
                 val windowSize = calculateWindowSizeClass(this)
                 val displayFeatures = calculateDisplayFeatures(this)
-                val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+
 
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -50,9 +50,9 @@ class MainActivity : ComponentActivity() {
                 ) {
 
                     EquityCloneApp(
+                        equityCloneHomeUIState = uiState,
                         windowSize = windowSize,
                         displayFeatures = displayFeatures,
-                        equityCloneHomeUIState = uiState,
                         closeDetailScreen = {
                             viewModel.closeDetailScreen()
                         },
@@ -73,7 +73,7 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
 @Preview(showBackground = true)
 @Composable
-fun ReplyAppPreview() {
+fun EquityCloneAppPreview() {
     EquityMBankingCloneTheme {
         EquityCloneApp(
             equityCloneHomeUIState = EquityCloneHomeUIState(emails = LocalEmailsDataProvider.allEmails),
@@ -86,7 +86,7 @@ fun ReplyAppPreview() {
 @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
 @Preview(showBackground = true, widthDp = 700, heightDp = 500)
 @Composable
-fun ReplyAppPreviewTablet() {
+fun EquityCloneAppPreviewTablet() {
     EquityMBankingCloneTheme {
         EquityCloneApp(
             equityCloneHomeUIState = EquityCloneHomeUIState(emails = LocalEmailsDataProvider.allEmails),
@@ -99,7 +99,7 @@ fun ReplyAppPreviewTablet() {
 @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
 @Preview(showBackground = true, widthDp = 500, heightDp = 700)
 @Composable
-fun ReplyAppPreviewTabletPortrait() {
+fun EquityCloneAppPreviewTabletPortrait() {
     EquityMBankingCloneTheme {
         EquityCloneApp(
             equityCloneHomeUIState = EquityCloneHomeUIState(emails = LocalEmailsDataProvider.allEmails),
@@ -112,7 +112,7 @@ fun ReplyAppPreviewTabletPortrait() {
 @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
 @Preview(showBackground = true, widthDp = 1100, heightDp = 600)
 @Composable
-fun ReplyAppPreviewDesktop() {
+fun EquityCloneAppPreviewDesktop() {
     EquityMBankingCloneTheme {
         EquityCloneApp(
             equityCloneHomeUIState = EquityCloneHomeUIState(emails = LocalEmailsDataProvider.allEmails),
@@ -125,7 +125,7 @@ fun ReplyAppPreviewDesktop() {
 @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
 @Preview(showBackground = true, widthDp = 600, heightDp = 1100)
 @Composable
-fun ReplyAppPreviewDesktopPortrait() {
+fun EquityCloneAppPreviewDesktopPortrait() {
     EquityMBankingCloneTheme {
         EquityCloneApp(
             equityCloneHomeUIState = EquityCloneHomeUIState(emails = LocalEmailsDataProvider.allEmails),

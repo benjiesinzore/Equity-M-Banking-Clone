@@ -1,11 +1,11 @@
-package com.benjaminsinzore.equitym_bankingclone.ui.theme
+package com.benjaminsinzore.equitym_bankingclone.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.benjaminsinzore.equitym_bankingclone.data.Email
-import com.benjaminsinzore.equitym_bankingclone.data.EmailsRepository
-import com.benjaminsinzore.equitym_bankingclone.data.EmailsRepositoryImpl
-import com.benjaminsinzore.equitym_bankingclone.ui.theme.utils.EquityCloneContentType
+import com.benjaminsinzore.equitym_bankingclone.data.models.Email
+import com.benjaminsinzore.equitym_bankingclone.data.repositories.EmailsRepository
+import com.benjaminsinzore.equitym_bankingclone.data.repositories.EmailsRepositoryImpl
+import com.benjaminsinzore.equitym_bankingclone.ui.utils.EquityCloneContentType
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.catch

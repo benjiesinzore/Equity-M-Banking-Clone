@@ -22,8 +22,8 @@ import androidx.navigation.compose.rememberNavController
 import androidx.window.layout.DisplayFeature
 import androidx.window.layout.FoldingFeature
 import com.benjaminsinzore.equitym_bankingclone.ui.navigation.*
-import com.benjaminsinzore.equitym_bankingclone.ui.theme.EquityCloneHomeUIState
-import com.benjaminsinzore.equitym_bankingclone.ui.theme.utils.*
+import com.benjaminsinzore.equitym_bankingclone.ui.screens.*
+import com.benjaminsinzore.equitym_bankingclone.ui.utils.*
 import kotlinx.coroutines.launch
 
 
@@ -271,24 +271,28 @@ private fun EquityCloneNavHost(
         navController = navController,
         startDestination = EquityCloneRoute.INBOX,
     ) {
+
         composable(EquityCloneRoute.INBOX) {
             EquityCloneInboxScreen(
                 contentType = contentType,
                 replyHomeUIState = replyHomeUIState,
-                navigationType = navigationType,
                 displayFeatures = displayFeatures,
                 closeDetailScreen = closeDetailScreen,
                 navigateToDetail = navigateToDetail,
             )
         }
         composable(EquityCloneRoute.DM) {
-            EmptyComingSoon()
+            EquityCloneChatsScreen()
         }
         composable(EquityCloneRoute.ARTICLES) {
-            EmptyComingSoon()
+            EquityCloneArticlesScreen()
         }
         composable(EquityCloneRoute.GROUPS) {
-            EmptyComingSoon()
+            EquityClonePeopleScreen(
+                contentType = contentType,
+                navigationType = navigationType
+            )
         }
+
     }
 }

@@ -51,28 +51,32 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
-    implementation 'androidx.activity:activity-compose:1.6.1'
-    implementation "androidx.compose.ui:ui:$compose_ui_version"
-    implementation "androidx.compose.ui:ui-tooling-preview:$compose_ui_version"
-    implementation 'androidx.compose.material:material:1.3.1'
-    implementation 'androidx.lifecycle:lifecycle-runtime-compose:2.6.0-alpha03'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
-    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
-    debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
-    debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+    implementation ('androidx.core:core-ktx:1.9.0')
+    implementation ('androidx.lifecycle:lifecycle-runtime-ktx:2.5.1')
+    implementation ('androidx.activity:activity-compose:1.6.1')
+    implementation ("androidx.compose.ui:ui:$compose_ui_version")
+    implementation ("androidx.compose.ui:ui-tooling-preview:$compose_ui_version")
+    implementation ('androidx.compose.material:material:1.3.1')
+    implementation ('androidx.lifecycle:lifecycle-runtime-compose:2.6.0-alpha03')
+    testImplementation ('junit:junit:4.13.2')
+    androidTestImplementation ('androidx.test.ext:junit:1.1.4')
+    androidTestImplementation ('androidx.test.espresso:espresso-core:3.5.0')
+    androidTestImplementation ("androidx.compose.ui:ui-test-junit4:$compose_ui_version")
+    debugImplementation ("androidx.compose.ui:ui-tooling:$compose_ui_version")
+    debugImplementation ("androidx.compose.ui:ui-test-manifest:$compose_ui_version")
 
-    // custom declaration for latest versions of material 3 and adaptive accompanist
-    implementation("androidx.compose.material3:material3:1.1.0-alpha02")
-    implementation("com.google.accompanist:accompanist-adaptive:0.26.2-beta")
 
-    //Compose Icons
-    implementation ("androidx.compose.material:material-icons-extended:1.3.1")
+    /*
+        External Libraries
+        These Dependencies are meant to handle the following
+        Handing My Modules, these are
+            1. Common
+            2. Data
+            3. Domain
 
-    //Additional Libraries
+        In addition to that, these libraries take care of State,
+        Injections, calling APIs just to name a few
+     */
     def accompanist = "0.27.0"
     implementation("com.google.accompanist:accompanist-flowlayout:$accompanist")
     implementation("com.google.accompanist:accompanist-pager:$accompanist")
@@ -90,21 +94,16 @@ dependencies {
     implementation("androidx.compose.material3:material3:1.0.1")
     implementation("androidx.compose.material3:material3-window-size-class:1.0.1")
 
-
-
     //navigation
     implementation("androidx.navigation:navigation-compose:2.5.3")
-
 
     // Coroutines
     implementation('org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0')
     implementation ('org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4')
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4")
 
-
     //Dagger - Hilt
     implementation ('com.google.dagger:hilt-android:2.44.2')
-
 
     // Dagger - Hilt
     kapt ("com.google.dagger:hilt-android-compiler:2.44.2")
@@ -121,7 +120,6 @@ dependencies {
     implementation ('org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0')
     implementation ('org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4')
 
-
     // Coil
     implementation ("io.coil-kt:coil-compose:2.2.2")
 
@@ -131,16 +129,12 @@ dependencies {
     // flow layout
     implementation ("com.google.accompanist:accompanist-flowlayout:0.27.0")
 
+    //Compose Icons
+    implementation ("androidx.compose.material:material-icons-extended:1.3.1")
 
-
-
-
-
-
-
-
-
-
+    // custom declaration for latest versions of material 3 and adaptive accompanist
+    implementation("androidx.compose.material3:material3:1.1.0-alpha02")
+    implementation("com.google.accompanist:accompanist-adaptive:0.26.2-beta")
 
     def androidx_lifecycle_compose = "2.5.1"
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:$androidx_lifecycle_compose")

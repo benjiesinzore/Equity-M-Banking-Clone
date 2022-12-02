@@ -1,4 +1,4 @@
-package com.benjaminsinzore.equitym_bankingclone.data
+package com.benjaminsinzore.equitym_bankingclone.data.models
 
 import androidx.annotation.DrawableRes
 
