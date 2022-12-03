@@ -7,6 +7,12 @@
     <string name="tab_dm">Direct Messages</string>
     <string name="tab_groups">Groups</string>
 
+    <string name="ic_txt_home">Home</string>
+    <string name="ic_txt_transaction">Transact</string>
+    <string name="ic_txt_loan">Borrow</string>
+    <string name="ic_txt_more">More</string>
+
+
     <string name="profile">Profile</string>
     <string name="search">Search</string>
     <string name="search_equity">Search</string>
@@ -16,6 +22,7 @@
     <string name="edit">Edit</string>
     <string name="compose">Compose</string>
 
+    <string name="home_screen">Home Screen</string>
     <string name="articles_screen">Articles Screen</string>
     <string name="charts_screen">Charts Screen</string>
     <string name="group_screen">Group Screen</string>

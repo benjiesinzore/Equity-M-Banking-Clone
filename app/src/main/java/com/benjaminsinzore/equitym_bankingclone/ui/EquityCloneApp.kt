@@ -273,13 +273,7 @@ private fun EquityCloneNavHost(
     ) {
 
         composable(EquityCloneRoute.INBOX) {
-            EquityCloneInboxScreen(
-                contentType = contentType,
-                replyHomeUIState = replyHomeUIState,
-                displayFeatures = displayFeatures,
-                closeDetailScreen = closeDetailScreen,
-                navigateToDetail = navigateToDetail,
-            )
+            EquityCloneHomeScreen()
         }
         composable(EquityCloneRoute.DM) {
             EquityCloneChatsScreen()
