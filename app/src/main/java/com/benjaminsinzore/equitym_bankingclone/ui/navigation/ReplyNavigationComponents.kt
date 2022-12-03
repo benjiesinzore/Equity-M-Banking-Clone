@@ -21,7 +21,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MenuOpen
 import androidx.compose.material3.*
@@ -33,7 +32,6 @@ import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.layout.Measurable
 import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.offset
 import com.benjaminsinzore.equitym_bankingclone.R
@@ -70,19 +68,6 @@ fun EquityCloneNavigationRail(
                             )
                         }
                     )
-                    FloatingActionButton(
-                        onClick = { /*TODO*/ },
-                        modifier = Modifier.padding(top = 8.dp, bottom = 32.dp),
-                        containerColor = MaterialTheme.colorScheme.tertiaryContainer,
-                        contentColor = MaterialTheme.colorScheme.onTertiaryContainer
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Edit,
-                            contentDescription = stringResource(id = R.string.edit),
-                            modifier = Modifier.size(18.dp)
-                        )
-                    }
-                    Spacer(Modifier.height(8.dp)) // NavigationRailHeaderPadding
                     Spacer(Modifier.height(4.dp)) // NavigationRailVerticalPadding
                 }
 
@@ -161,7 +146,14 @@ fun EquityCloneBottomNavigationBar(
                         imageVector = replyDestination.selectedIcon,
                         contentDescription = stringResource(id = replyDestination.iconTextId)
                     )
-                }
+
+                },
+
+                colors = NavigationBarItemDefaults.colors(
+
+                    indicatorColor = Color.Gray
+                )
+
             )
         }
     }
@@ -181,7 +173,7 @@ fun PermanentNavigationDrawerContent(
         Layout(
             modifier = Modifier
                 .background(MaterialTheme.colorScheme.inverseOnSurface)
-                .padding(16.dp),
+                .padding(5.dp),
             content = {
                 Column(
                     modifier = Modifier.layoutId(LayoutType.HEADER),
@@ -190,30 +182,12 @@ fun PermanentNavigationDrawerContent(
                 ) {
                     Text(
                         modifier = Modifier
-                            .padding(16.dp),
+                            .padding(5.dp),
                         text = stringResource(id = R.string.app_name).uppercase(),
                         style = MaterialTheme.typography.titleMedium,
                         color = MaterialTheme.colorScheme.primary
                     )
-                    ExtendedFloatingActionButton(
-                        onClick = { /*TODO*/ },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(top = 8.dp, bottom = 40.dp),
-                        containerColor = MaterialTheme.colorScheme.tertiaryContainer,
-                        contentColor = MaterialTheme.colorScheme.onTertiaryContainer
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Edit,
-                            contentDescription = stringResource(id = R.string.edit),
-                            modifier = Modifier.size(18.dp)
-                        )
-                        Text(
-                            text = stringResource(id = R.string.compose),
-                            modifier = Modifier.weight(1f),
-                            textAlign = TextAlign.Center
-                        )
-                    }
+
                 }
 
                 Column(
@@ -240,7 +214,8 @@ fun PermanentNavigationDrawerContent(
                                 )
                             },
                             colors = NavigationDrawerItemDefaults.colors(
-                                unselectedContainerColor = Color.Transparent
+                                unselectedContainerColor = Color.Gray,
+                                selectedContainerColor = Color.Gray
                             ),
                             onClick = { navigateToTopLevelDestination(replyDestination) }
                         )
@@ -327,25 +302,6 @@ fun ModalNavigationDrawerContent(
                         }
                     }
 
-                    ExtendedFloatingActionButton(
-                        onClick = { /*TODO*/ },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(top = 8.dp, bottom = 40.dp),
-                        containerColor = MaterialTheme.colorScheme.tertiaryContainer,
-                        contentColor = MaterialTheme.colorScheme.onTertiaryContainer
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Edit,
-                            contentDescription = stringResource(id = R.string.edit),
-                            modifier = Modifier.size(18.dp)
-                        )
-                        Text(
-                            text = stringResource(id = R.string.compose),
-                            modifier = Modifier.weight(1f),
-                            textAlign = TextAlign.Center
-                        )
-                    }
                 }
 
                 Column(
@@ -372,7 +328,8 @@ fun ModalNavigationDrawerContent(
                                 )
                             },
                             colors = NavigationDrawerItemDefaults.colors(
-                                unselectedContainerColor = Color.Transparent
+                                unselectedContainerColor = Color.Transparent,
+                                selectedContainerColor = Color.Gray
                             ),
                             onClick = { navigateToTopLevelDestination(replyDestination) }
                         )
