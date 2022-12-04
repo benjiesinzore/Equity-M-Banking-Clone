@@ -49,7 +49,10 @@ fun EquityCloneNavigationRail(
         modifier = Modifier.fillMaxHeight(),
         containerColor = MaterialTheme.colorScheme.inverseOnSurface
     ) {
-        // TODO remove custom nav rail positioning when NavRail component supports it. ticket : b/232495216
+        /*
+          TODO remove custom nav rail positioning when NavRail component
+           supports it. ticket : b/232495216
+        */
         Layout(
             modifier = Modifier.widthIn(max = 80.dp),
             content = {
@@ -107,12 +110,12 @@ fun EquityCloneNavigationRail(
                 val contentPlaceable = contentMeasurable.measure(
                     constraints.offset(vertical = -headerPlaceable.height)
                 )
-                layout(constraints.maxWidth, constraints.maxHeight) {
+                layout(constraints.maxWidth, constraints.minHeight) {
                     // Place the header, this goes at the top
                     headerPlaceable.placeRelative(0, 0)
 
                     // Determine how much space is not taken up by the content
-                    val nonContentVerticalSpace = constraints.maxHeight - contentPlaceable.height
+                    val nonContentVerticalSpace = constraints.minHeight - contentPlaceable.height
 
                     val contentPlaceableY = when (navigationContentPosition) {
                         // Figure out the place we want to place the content, with respect to the
@@ -202,7 +205,7 @@ fun PermanentNavigationDrawerContent(
                             label = {
                                 Text(
                                     text = stringResource(id = replyDestination.iconTextId),
-                                    modifier = Modifier.padding(horizontal = 16.dp)
+                                    modifier = Modifier.padding(horizontal = 5.dp)
                                 )
                             },
                             icon = {
@@ -237,12 +240,12 @@ fun PermanentNavigationDrawerContent(
                 val contentPlaceable = contentMeasurable.measure(
                     constraints.offset(vertical = -headerPlaceable.height)
                 )
-                layout(constraints.maxWidth, constraints.maxHeight) {
+                layout(constraints.maxWidth, constraints.minHeight) {
                     // Place the header, this goes at the top
                     headerPlaceable.placeRelative(0, 0)
 
                     // Determine how much space is not taken up by the content
-                    val nonContentVerticalSpace = constraints.maxHeight - contentPlaceable.height
+                    val nonContentVerticalSpace = constraints.minHeight - contentPlaceable.height
 
                     val contentPlaceableY = when (navigationContentPosition) {
                         // Figure out the place we want to place the content, with respect to the
@@ -351,12 +354,12 @@ fun ModalNavigationDrawerContent(
                 val contentPlaceable = contentMeasurable.measure(
                     constraints.offset(vertical = -headerPlaceable.height)
                 )
-                layout(constraints.maxWidth, constraints.maxHeight) {
+                layout(constraints.maxWidth, constraints.minHeight) {
                     // Place the header, this goes at the top
                     headerPlaceable.placeRelative(0, 0)
 
                     // Determine how much space is not taken up by the content
-                    val nonContentVerticalSpace = constraints.maxHeight - contentPlaceable.height
+                    val nonContentVerticalSpace = constraints.minHeight - contentPlaceable.height
 
                     val contentPlaceableY = when (navigationContentPosition) {
                         // Figure out the place we want to place the content, with respect to the

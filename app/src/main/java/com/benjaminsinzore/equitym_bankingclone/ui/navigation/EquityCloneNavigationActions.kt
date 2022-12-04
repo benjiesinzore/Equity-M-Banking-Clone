@@ -19,8 +19,8 @@ package com.benjaminsinzore.equitym_bankingclone.ui.navigation
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Help
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Phone
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
@@ -84,8 +84,8 @@ val TOP_LEVEL_DESTINATIONS = listOf(
     ),
     EquityCloneTopLevelDestination(
         route = EquityCloneRoute.GROUPS,
-        selectedIcon = Icons.Default.MoreVert,
-        unselectedIcon = Icons.Default.MoreVert,
+        selectedIcon = Icons.Default.Settings,
+        unselectedIcon = Icons.Default.Settings,
         iconText = R.string.ic_txt_more.toString(),
         iconTextId = R.string.tab_article
     )
