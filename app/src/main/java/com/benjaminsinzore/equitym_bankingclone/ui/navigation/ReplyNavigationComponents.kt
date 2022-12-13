@@ -154,7 +154,9 @@ fun EquityCloneBottomNavigationBar(
 
                 colors = NavigationBarItemDefaults.colors(
 
-                    indicatorColor = Color.Gray
+                    indicatorColor = Color(0xFF90292A),
+                    selectedIconColor = Color.White,
+                    unselectedIconColor = Color(0xFF90292A)
                 )
 
             )
@@ -217,8 +219,10 @@ fun PermanentNavigationDrawerContent(
                                 )
                             },
                             colors = NavigationDrawerItemDefaults.colors(
-                                unselectedContainerColor = Color.Gray,
-                                selectedContainerColor = Color.Gray
+                                unselectedContainerColor = Color(0xFF90292A),
+                                selectedContainerColor = Color(0xFF90292A),
+                                selectedIconColor = Color.White,
+                                unselectedIconColor = Color(0xFF90292A)
                             ),
                             onClick = { navigateToTopLevelDestination(replyDestination) }
                         )
@@ -331,8 +335,10 @@ fun ModalNavigationDrawerContent(
                                 )
                             },
                             colors = NavigationDrawerItemDefaults.colors(
-                                unselectedContainerColor = Color.Transparent,
-                                selectedContainerColor = Color.Gray
+                                unselectedContainerColor = Color(0xFF90292A),
+                                selectedContainerColor = Color(0xFF90292A),
+                                selectedIconColor = Color.White,
+                                unselectedIconColor = Color(0xFF90292A)
                             ),
                             onClick = { navigateToTopLevelDestination(replyDestination) }
                         )

@@ -127,7 +127,8 @@ fun EquityNavigationWrapper(
     navigationContentPosition: EquityCloneNavigationContentPosition,
     replyHomeUIState: EquityCloneHomeUIState,
     closeDetailScreen: () -> Unit,
-    navigateToDetail: (Long, EquityCloneContentType) -> Unit) {
+    navigateToDetail: (Long, EquityCloneContentType) -> Unit
+) {
 
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val scope = rememberCoroutineScope()
@@ -221,7 +222,8 @@ fun EquityCloneAppContent(
 ) {
 
     Row(modifier = modifier.fillMaxSize()) {
-        AnimatedVisibility(visible = navigationType == EquityCloneNavigationType.NAVIGATION_RAIL) {
+        AnimatedVisibility(visible = navigationType == EquityCloneNavigationType
+            .NAVIGATION_RAIL) {
             EquityCloneNavigationRail(
                 selectedDestination = selectedDestination,
                 navigationContentPosition = navigationContentPosition,
@@ -244,7 +246,8 @@ fun EquityCloneAppContent(
                 navigateToDetail = navigateToDetail,
                 modifier = Modifier.weight(1f),
             )
-            AnimatedVisibility(visible = navigationType == EquityCloneNavigationType.BOTTOM_NAVIGATION) {
+            AnimatedVisibility(visible = navigationType == EquityCloneNavigationType
+                .BOTTOM_NAVIGATION) {
                 EquityCloneBottomNavigationBar(
                     selectedDestination = selectedDestination,
                     navigateToTopLevelDestination = navigateToTopLevelDestination
@@ -255,6 +258,8 @@ fun EquityCloneAppContent(
 }
 
 
+
+//Navigation From one Screen to another
 @Composable
 private fun EquityCloneNavHost(
     navController: NavHostController,

@@ -30,8 +30,7 @@ class MainActivity : ComponentActivity() {
 
     private val viewModel: EquityCloneHomeViewModel by viewModels()
 
-    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class, ExperimentalLifecycleComposeApi::class
-    )
+    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class, ExperimentalLifecycleComposeApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -78,7 +77,7 @@ fun EquityCloneAppPreview() {
         EquityCloneApp(
             equityCloneHomeUIState = EquityCloneHomeUIState(emails = LocalEmailsDataProvider.allEmails),
             windowSize = WindowSizeClass.calculateFromSize(DpSize(400.dp, 900.dp)),
-            displayFeatures = emptyList(),
+            displayFeatures = emptyList()
         )
     }
 }
